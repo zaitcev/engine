@@ -1,0 +1,16 @@
+----- adding the dummy user:
+
+# The engine user has no write access, the author user does.
+useradd -M -s /sbin/nologin engine
+
+----- initial installation of files:
+
+mkdir /usr/lib/engine-mod
+mkdir /var/www/wsgi-scripts
+
+mkdir /var/www/ani-nouto
+chown author /var/www/ani-nouto
+
+----- httpd.conf:
+
+SetEnv engine.root /var/lib/ani-nouto
